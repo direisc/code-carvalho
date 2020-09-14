@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/60011fc7-0ce9-4bd6-b565-a35208d41094/deploy-status)](https://app.netlify.com/sites/code-carvalho/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
