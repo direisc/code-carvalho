@@ -104,7 +104,7 @@ function App() {
 
       </div>
 
-      <footer><strong>Code Carvalho</strong> was born in 2019. | Todos os direitos reservados.</footer>
+      <footer><strong>Code Carvalho</strong> nasceu em 2019. | Todos os direitos reservados.</footer>
 
     </div>
   );
