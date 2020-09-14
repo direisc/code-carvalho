@@ -43,8 +43,8 @@ function App() {
         direction="right"
         img={(
           <div className="img_float_left">
-            <img className="bg" src={equipe} />
-            <img src={oak} className="oak" />
+            <img className="bg" src={equipe} alt="bg_oak" />
+            <img src={oak} className="oak" alt="oak" />
           </div>
         )}
         title={(<h2><strong className="color_primary">Equipe 100% remota</strong><br />
@@ -61,8 +61,8 @@ function App() {
         direction="left"
         img={(
           <div className="img_float_right">
-            <img className="bg" src={contract} />
-            <img src={oak_pink} className="oak" />
+            <img className="bg" src={contract} alt="bg_oak" />
+            <img src={oak_pink} className="oak" alt="oak_pink" />
           </div>
         )}
         title={(<h2><strong className="color_primary">Por que contratar?</strong></h2>)}

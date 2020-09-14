@@ -1,9 +1,6 @@
 import React from 'react';
 import Point from './Point';
 
-import organizacao from '../../assets/icons/gestao.svg';
-import desenvolvimento from '../../assets/icons/dev.svg';
-import terceirizacao from '../../assets/icons/outsourcing.svg'
 import './styles.css';
 
 

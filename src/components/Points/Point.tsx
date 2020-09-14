@@ -4,6 +4,7 @@ import organizacao from '../../assets/icons/gestao.svg';
 import desenvolvimento from '../../assets/icons/dev.svg';
 import terceirizacao from '../../assets/icons/outsourcing.svg'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 enum PointImage {
   organizacao,
   desenvolvimento,
