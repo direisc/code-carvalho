@@ -13,7 +13,7 @@
   grid-area: description;
   display: flex;
   flex-direction: column;
-  padding: 20rem 10rem;
+  padding: 20rem 4rem;
   z-index: 2;
   background: #FFFFFF66;
 }
@@ -72,6 +72,7 @@
   }
   .section_description {
     background: none;
+    padding: 20rem 10rem;
   }
   .section .img_float_left {
     display: block;

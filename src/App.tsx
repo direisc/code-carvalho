@@ -34,6 +34,20 @@ function App() {
     }
   }
 
+  const handleInvoice = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    let data = {}
+    formData.forEach((v, k) => {
+      data = {
+        ...data,
+        [k]: v,
+      }
+      console.log(k, v);
+    })
+    console.log(data);
+  }
+
   return (
     <div className="app" style={{ backgroundImage: `url(${bg})` }}>
       <Header handleOrcamento={handleOrcamento} handleTeam={handleTeam} />
@@ -81,12 +95,12 @@ function App() {
         <div className="form" ref={orcamento}>
           <h2 className="color_primary">Orçamento</h2>
           <p>Se você tem um grande projeto e precisa de uma <strong>equipe eficiente</strong> para desenvolvê-lo, preencha o formulário abaixo e <strong>entraremos em contato</strong> com você.</p>
-          <form>
-            <input type="text" placeholder="Nome" />
-            <input type="text" placeholder="Telefone" />
-            <input type="text" placeholder="E-mail" />
-            <input type="text" placeholder="Empresa" />
-            <textarea placeholder="Descreva seu projeto" rows={5}></textarea>
+          <form onSubmit={handleInvoice}>
+            <input type="text" name="name" placeholder="Nome" />
+            <input type="tel" name="phone" placeholder="Telefone" />
+            <input type="email" name="email" placeholder="E-mail" />
+            <input type="text" name="company" placeholder="Empresa" />
+            <textarea name="message" placeholder="Descreva seu projeto" rows={5}></textarea>
             <button type="submit" className="button-submit">Quero contratar</button>
           </form>
         </div>
@@ -94,10 +108,10 @@ function App() {
         <div className="form" ref={team}>
           <h2 className="color_primary">Faça parte do time</h2>
           <p>Se você tem um grande projeto e precisa de uma <strong>equipe eficiente</strong> para desenvolvê-lo, preencha o formulário abaixo e <strong>entraremos em contato</strong> com você.</p>
-          <form>
-            <input type="text" placeholder="Nome" />
-            <input type="text" placeholder="E-mail" />
-            <input type="text" placeholder="Telefone" />
+          <form onSubmit={handleInvoice}>
+            <input type="text" name="name" placeholder="Nome" />
+            <input type="email" name="email" placeholder="E-mail" />
+            <input type="tel" name="phone" placeholder="Telefone" />
             <button type="submit" className="button-submit">Faça parte do time</button>
           </form>
         </div>

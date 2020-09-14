@@ -29,6 +29,21 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <form name="invoice" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="text" name="phone" />
+      <input type="text" name="email" />
+      <input type="text" name="company" />
+      <textarea name="message"></textarea>
+    </form>
+  </div>
+
+  <form name="team" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="text" name="phone" />
+    <input type="text" name="email" />
+  </form>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

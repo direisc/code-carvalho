@@ -136,7 +136,7 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 10rem;
-  padding: 0rem 10rem;
+  padding: 0rem 4rem;
 }
 .form {
   padding: 6rem 0;
@@ -147,6 +147,7 @@ button {
 @media(min-width: 1200px) {
   .form_grid {
     grid-template-columns: 1fr 1fr;
+    padding: 0rem 10rem;
   }
 }
 .form p {
