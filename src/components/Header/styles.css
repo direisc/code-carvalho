@@ -8,7 +8,7 @@ header {
 }
 
 header img {
-    /* height: 10rem; */
+    min-height: 150px;
     flex: 1;
 }
 
