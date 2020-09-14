@@ -1,0 +1,107 @@
+header {
+    background: var(--primary-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8rem 4rem 6rem 4rem;
+    flex-direction: column;
+}
+
+header img {
+    /* height: 10rem; */
+    flex: 1;
+}
+
+header .header-actions {
+    flex: 1;
+    text-align: right;
+}
+
+header .header-actions button,
+header .header-actions a {
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 0px;
+    color: var(--color-button-text);
+    text-transform: uppercase;
+    padding: 1.7rem 2.5rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    text-decoration: none;
+}
+
+header .header-actions button + button,
+header .header-actions a + a {
+    margin-top: 1.5rem;
+}
+
+.button-primary {
+    background: none;
+    border: .3rem solid var(--color-button-text);
+}
+.button-secundary {
+    background-color: var(--color-secondary);
+    border: none;
+}
+
+.headline {
+    /* background: var(--primary-black); */
+    display: grid;
+    grid-row: 1fr 1fr;
+    grid-column: auto;
+    /* text-align: center; */
+}
+
+.headline h2 {
+    background: var(--primary-black);
+    color: var(--color-box-base);
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 6rem;
+}
+.headline h2 strong {
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+.headline img {
+    width: 100%;
+    max-height: 40rem;
+    object-fit: cover;
+}
+
+@media(min-width: 1200px) {
+    header {
+        flex-direction: row;
+        padding: 12rem 14rem 10rem 14rem;
+    }
+    header .header-actions button,
+    header .header-actions a {
+        width: auto;
+        min-width: 26rem;
+    }
+
+    header .header-actions button + button,
+    header .header-actions a + a {
+        margin-top: 0;
+        margin-left: 8rem;
+    }
+
+    .headline {
+        display: flex;
+        grid-row: auto;
+        grid-column: 1fr 1fr;
+    }
+
+    .headline h2 {
+        display: table;
+        font-size: 5rem;
+        padding: 12rem 24rem 20rem 14rem;
+    }
+
+    .headline img {
+        max-width: 50vw;
+        max-height: 88rem;
+        object-fit: cover;
+    }
+}

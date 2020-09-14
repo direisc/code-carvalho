@@ -1,0 +1,33 @@
+.points {
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 0;
+}
+@media(min-width: 1200px) {
+  .points {
+    flex-direction: row;
+    padding: 15rem 0;
+  }
+}
+
+.point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 10rem;
+}
+.point img {
+  width: 12.3rem;
+  height: 13rem;
+}
+.point h2 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  min-height: 7.4rem;
+}
+.point p {
+  font-size: 2.3rem;
+  text-align: center;
+}

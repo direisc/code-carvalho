@@ -1,0 +1,123 @@
+.section, .section.left{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "img description";
+}
+.section .ref {
+  grid-area: img;
+}
+.section .ref {
+  grid-area: img;
+}
+.section_description {
+  grid-area: description;
+  display: flex;
+  flex-direction: column;
+  padding: 20rem 10rem;
+  z-index: 2;
+  background: #FFFFFF66;
+}
+.section .img_float_left {
+  position: absolute;
+  left: calc(-500px + 33vw);
+  width: 500px;
+}
+.section .img_float_right {
+  position: absolute;
+  left: calc(100vw - 33vw);
+  width: 500px;
+}
+
+.section .img_float_left .bg, 
+.section .img_float_right .bg,
+.section .img_float_left .oak, 
+.section .img_float_right .oak {
+  position: absolute;
+}
+
+.section .img_float_left .bg {
+  width: 514px;
+}
+.section .img_float_left .oak {
+  width: 217px;
+}
+.section .img_float_right .bg {
+  width: 365px;
+}
+.section .img_float_right .oak {
+  width: 200px;
+}
+
+.section .img_float_left .oak {
+  right: 75px;
+  top: 333px;
+}
+.section .img_float_right .bg {
+  left: 69px;
+}
+.section .img_float_right .oak {
+  top: 190px;
+}
+
+
+@media(min-width: 980px) {
+  .section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "img description";
+  }
+  .section.left {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "description img";
+  }
+  .section_description {
+    background: none;
+  }
+  .section .img_float_left {
+    display: block;
+    left: calc(-1000px + 33vw);
+    width: 1000px;
+  }
+  .section .img_float_right {
+    display: block;
+    left: calc(100vw - 33vw);
+    width: 1000px;
+  }
+
+  .section .img_float_left .bg {
+    width: 1028px;
+  }
+  .section .img_float_left .oak {
+    width: 434px;
+  }
+  .section .img_float_right .bg {
+    width: 730px;
+  }
+  .section .img_float_right .oak {
+    width: 400px;
+  }
+
+  .section .img_float_left .oak {
+    right: 150px;
+    top: 666px;
+  }
+  .section .img_float_right .bg {
+    left: 138px;
+  }
+  .section .img_float_right .oak {
+    top: 380px;
+  }
+}
+.section_description h2 {
+  font-weight: 300;
+}
+.section_description h3 {
+  font-size: 3rem;
+}
+.section_description p+h3 {
+  margin-top: 5rem;
+}
+.section .line_pink {
+  width: 15rem;
+}
+
