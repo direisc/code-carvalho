@@ -1,20 +1,27 @@
 header {
     background: var(--primary-black);
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8rem 6rem 6rem 6rem;
     flex-direction: column;
+
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: 1fr;
 }
 
 header img {
-    min-height: 150px;
+    width: 100%;
     flex: 1;
 }
 
 header .header-actions {
     flex: 1;
     text-align: right;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
 }
 
 header .header-actions button,
@@ -32,7 +39,7 @@ header .header-actions a {
 
 header .header-actions button + button,
 header .header-actions a + a {
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
 }
 
 .button-primary {
@@ -58,6 +65,7 @@ header .header-actions a + a {
     font-size: 3rem;
     font-weight: 300;
     padding: 6rem;
+    padding-top: 0;
 }
 .headline h2 strong {
     color: var(--color-primary);
@@ -74,6 +82,10 @@ header .header-actions a + a {
     header {
         flex-direction: row;
         padding: 12rem 14rem 10rem 14rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    header .header-actions {
+        grid-template-columns: 1fr 1fr;
     }
     header .header-actions button,
     header .header-actions a {
@@ -84,7 +96,7 @@ header .header-actions a + a {
     header .header-actions button + button,
     header .header-actions a + a {
         margin-top: 0;
-        margin-left: 8rem;
+        /* margin-left: 8rem; */
     }
 
     .headline {
