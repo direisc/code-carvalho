@@ -34,18 +34,50 @@ function App() {
     }
   }
 
-  const handleInvoice = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
+  const extractFormDataJSON = (form: HTMLFormElement): object => {
+    const formData = new FormData(form);
     let data = {}
     formData.forEach((v, k) => {
       data = {
         ...data,
         [k]: v,
       }
-      console.log(k, v);
+    });
+    return data;
+  }
+
+  const handleInvoiceForm = (event: React.FormEvent<HTMLFormElement>) => {
+    const data = extractFormDataJSON(event.currentTarget);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "invoice", ...data })
     })
-    console.log(data);
+      .then(() => alert("Obrigado!"))
+      .catch(error => alert(error));
+
+    event.preventDefault();
+  }
+
+  const handleTeamForm = (event: React.FormEvent<HTMLFormElement>) => {
+    const data = extractFormDataJSON(event.currentTarget);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "team", ...data })
+    })
+      .then(() => alert("Obrigado!"))
+      .catch(error => alert(error));
+
+    event.preventDefault();
   }
 
   return (
@@ -95,7 +127,7 @@ function App() {
         <div className="form" ref={orcamento}>
           <h2 className="color_primary">Orçamento</h2>
           <p>Se você tem um grande projeto e precisa de uma <strong>equipe eficiente</strong> para desenvolvê-lo, preencha o formulário abaixo e <strong>entraremos em contato</strong> com você.</p>
-          <form onSubmit={handleInvoice}>
+          <form onSubmit={handleInvoiceForm}>
             <input type="text" name="name" placeholder="Nome" />
             <input type="tel" name="phone" placeholder="Telefone" />
             <input type="email" name="email" placeholder="E-mail" />
@@ -108,7 +140,7 @@ function App() {
         <div className="form" ref={team}>
           <h2 className="color_primary">Faça parte do time</h2>
           <p>Se você tem um grande projeto e precisa de uma <strong>equipe eficiente</strong> para desenvolvê-lo, preencha o formulário abaixo e <strong>entraremos em contato</strong> com você.</p>
-          <form onSubmit={handleInvoice}>
+          <form onSubmit={handleTeamForm}>
             <input type="text" name="name" placeholder="Nome" />
             <input type="email" name="email" placeholder="E-mail" />
             <input type="tel" name="phone" placeholder="Telefone" />
