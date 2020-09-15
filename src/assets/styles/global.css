@@ -58,13 +58,17 @@ body,
 
 body {
   background: var(--color-background);
-  overflow-x: hidden;
 }
 
 #root {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 320px;
+  max-width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body,
