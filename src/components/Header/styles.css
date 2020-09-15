@@ -6,7 +6,7 @@ header {
     flex-direction: column;
 
     display: grid;
-    grid-gap: 4rem;
+    grid-gap: 8rem;
     grid-template-columns: 1fr;
 }
 
