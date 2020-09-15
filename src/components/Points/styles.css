@@ -3,18 +3,12 @@
   flex-direction: column;
   padding: 10rem 0;
 }
-@media(min-width: 1200px) {
-  .points {
-    flex-direction: row;
-    padding: 15rem 0;
-  }
-}
 
 .point {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 10rem;
+  padding: 3rem 6rem;
 }
 .point img {
   width: 12.3rem;
@@ -30,4 +24,15 @@
 .point p {
   font-size: 2.3rem;
   text-align: center;
+}
+
+@media(min-width: 1200px) {
+  .points {
+    flex-direction: row;
+    padding: 15rem 0;
+  }
+
+  .point {
+    padding: 3rem 10rem;
+  }
 }
